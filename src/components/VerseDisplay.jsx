@@ -112,10 +112,10 @@ const VerseDisplay = ({ verse, theme }) => {
             </p>
           </div>
 
-          <div className="flex flex-wrap self-end items-center justify-center gap-3 mt-6">
+          <div className="flex flex-col sm:flex-row sm:self-end items-center justify-center gap-3 mt-6">
             <button
               onClick={handleCopyText}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium shadow-md transition-all bg-white/10 hover:bg-white/5 text-white backdrop-blur-sm active:scale-95 cursor-pointer text-sm md:text-base"
+              className="w-full flex justify-center items-center sm:w-auto gap-2 px-5 py-2.5 rounded-xl font-medium shadow-md transition-all bg-white/10 hover:bg-white/5 text-white backdrop-blur-sm active:scale-95 cursor-pointer text-sm md:text-base"
             >
               {copied ? <FaCheck className="text-green-400" /> : <FaCopy />}
               {copied ? "Tersalin!" : "Salin Ayat"}
