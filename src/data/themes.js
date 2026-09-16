@@ -1,0 +1,68 @@
+const themes = {
+  default: {
+    label: "Halo",
+    src: null,
+    type: null,
+    theme: {
+      label: "text-[#BCE0FE]",
+      versecontainer: "bg-white/20 backdrop-blur-md",
+      verse: "text-[#E6E0FF]",
+      reference: "text-[#151101]",
+      greeting: "text-white",
+      appname: "text-yellow-300",
+      button: "bg-pink-500 hover:bg-pink-600 text-black",
+      input: "bg-white/10 text-[#E2E0DA] placeholder-[#E2E0DA]",
+      hint: "text-white",
+    },
+  },
+  christmas: {
+    label: "Selamat Hari Natal",
+    src: "/backgrounds/christmas.mp4",
+    type: "video",
+    theme: {
+      label: "text-yellow-300",
+      versecontainer: "bg-white/30 backdrop-blur-md",
+      verse: "text-[#3D0E2C]",
+      reference: "text-[#1E1B04]",
+      greeting: "text-[#E9EDEA]",
+      appname: "text-[#4ADE80]",
+      button: "bg-[#1C6235] hover:bg-[#0E3D1F] text-white",
+      input: "bg-white/30 text-black placeholder-black/90",
+      hint: "text-white drop-shadow-lg",
+    },
+  },
+  easter: {
+    label: "Selamat Hari Paskah",
+    src: "/backgrounds/easter.mp4",
+    type: "video",
+    theme: {
+      label: "text-fuchsia-200",
+      versecontainer: "bg-white/40 backdrop-blur-md",
+      verse: "text-purple-950",
+      reference: "text-cyan-950",
+      greeting: "text-yellow-400",
+      appname: "text-black",
+      button: "bg-yellow-400 hover:bg-yellow-500 text-black",
+      input: "bg-white/30 text-black placeholder-black",
+      hint: "text-white drop-shadow-md",
+    },
+  },
+  churchBirthday: {
+    label: "Selamat Ulang Tahun Gereja",
+    src: "/backgrounds/church-birthday.mp4",
+    type: "video",
+    theme: {
+      label: "text-[#F1F0F1]",
+      versecontainer: "bg-white/30 backdrop-blur-md",
+      verse: "text-[#011C1F]",
+      reference: "text-[#490420]",
+      greeting: "text-[#D6D2D3]",
+      appname: "text-pink-700",
+      button: "bg-pink-800 hover:bg-pink-900 text-white",
+      input: "bg-white/20 text-black placeholder-black/80",
+      hint: "text-white drop-shadow-md",
+    },
+  },
+};
+
+export default themes;
