@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import {
   FaChurch,
@@ -9,6 +10,7 @@ import {
   FaPhone,
   FaFileUpload,
   FaDownload,
+  FaArrowLeft,
 } from "react-icons/fa";
 
 const RegisterChurch = () => {
@@ -85,28 +87,35 @@ const RegisterChurch = () => {
   if (success) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-6">
-        <div className="bg-slate-800 p-8 rounded-2xl max-w-lg text-center border border-green-500/30">
+        <div className="bg-slate-800 p-8 rounded-2xl max-w-lg text-center border border-green-500/30 shadow-2xl">
           <FaChurch className="text-5xl text-green-400 mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-2">Pendaftaran Berhasil</h2>
-          <p className="text-gray-400 mb-6">
+          <p className="text-gray-400 mb-8">
             Terima kasih telah mendaftarkan gereja Anda. Tim kami akan melakukan
             verifikasi data (maksimal 2x24 jam). Kami akan menghubungi Anda via
             email jika akun telah disetujui.
           </p>
-          <button
-            onClick={() => (window.location.href = "/")}
-            className="text-yellow-400 hover:underline cursor-pointer"
+          <link
+            to="/"
+            className="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold rounded-xl transition-all text-yellow-400 cursor-pointer inline-block"
           >
             Kembali ke Beranda
-          </button>
+          </link>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-950 to-slate-900 text-white p-4 md:p-6">
-      <div className="bg-white/10 backdrop-blur-md p-4 md:p-8 rounded-2xl max-w-lg shadow-2xl border border-white/20">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-950 to-slate-900 text-white p-4 py-8 md:py-12">
+      <div className="bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-2xl max-w-lg w-full shadow-2xl border border-white/20 my-auto">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-yellow-400 transition-colors mb-6 md:mb-8"
+        >
+          <FaArrowLeft /> Kembali ke Beranda
+        </Link>
+
         <h2 className="text-2xl md:text-3xl font-bold text-center text-yellow-300 mb-2">
           Daftar Akun Admin Gereja
         </h2>
@@ -249,6 +258,16 @@ const RegisterChurch = () => {
             {loading ? "Mengirim Data..." : "Ajukan Pendaftaran"}
           </button>
         </form>
+
+        <div className="mt-6 text-center  text-sm text-gray-400">
+          Sudah punya akun? <br />
+          <Link
+            to="/login"
+            className="text-yellow-400 hover:underline font-medium mt-1 inline-block"
+          >
+            Login ke akun Anda
+          </Link>
+        </div>
       </div>
     </div>
   );
